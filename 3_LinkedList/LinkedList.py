@@ -50,8 +50,8 @@ class LinkedList:
 
         while fn is not None:
             if lcount == nposition:
-                new_inserted_node = Node(nvalue)       #First creating new inserted node of nvalue 
-                new_inserted_node.address = fn.address #In new inserted node address we give refference of it's next node in linkedlist i.e node that will be following the current node if there was no inserted node
+                new_inserted_node = Node(nvalue,fn.address)       #First creating new inserted node of nvalue 
+                # new_inserted_node.address = fn.address #In new inserted node address we give refference of it's next node in linkedlist i.e node that will be following the current node if there was no inserted node
                 fn.address = new_inserted_node         #In address of previous node of inserted node we put refference for new inserted node
 
             lcount += 1
