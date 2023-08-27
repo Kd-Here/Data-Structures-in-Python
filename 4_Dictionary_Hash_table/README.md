@@ -1,5 +1,8 @@
 Dictionary in python is based on Hash table format
 
+Here I created a class to that behave like dictionaries but without directly exposing dictionary-like functionality.
+
+
 
  A dictionary data structure, also known as a hash table, is a fundamental concept in computer science. It's designed to store and manage data in a key-value format, where each key uniquely identifies a value. The central idea behind a hash table is the use of a hash function, which transforms the key into a hash value or index. This index is then used to determine the location where the associated value should be stored or retrieved.
 
