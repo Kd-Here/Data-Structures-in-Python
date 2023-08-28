@@ -112,7 +112,9 @@ K['march 31'] = 876
 
 K['march 30'] = 535
 K['march 29'] = 536
-print(K.bucket[3].printing())
 
+
+if __name__ == "__main__":
+    print(K.bucket[3].printing())
 # This all __get__
 # print
