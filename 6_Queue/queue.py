@@ -19,28 +19,6 @@ class Queue:
         return len(self.q)
 
 
-pq = Queue()
-pq.enqueue({
-    'company': 'Wall Mart',
-    'timestamp': '15 apr, 11.01 AM',
-    'price': 131.10
-})
-pq.enqueue({
-    'company': 'Wall Mart',
-    'timestamp': '15 apr, 11.02 AM',
-    'price': 132
-})
-pq.enqueue({
-    'company': 'Wall Mart',
-    'timestamp': '15 apr, 11.03 AM',
-    'price': 135
-})
-
-pq.dequeue()
-pq.dequeue()
-pq.dequeue()
-
-
 '''
 When working with queues in Python, one might be tempted to use the built-in list
 due to its simplicity and familiarity. 
@@ -54,3 +32,51 @@ it will first allocate a new memory chunk, copy all 10 existing elements to this
 This introduces two main inefficiencies: the allocation of new memory and copying the existing elements.
 
 '''
+
+
+
+from collections import deque
+class QUEUE:
+    def __init__(self) -> None:
+        self.q = deque()
+
+    def enqueue(self,input):
+        self.q.append(input)
+
+    def dequeue(self):
+        if len(self.q) > 0:
+            c = self.q.popleft()
+            return c
+
+        else:
+            raise Exception("Dequeuing from empty queue!")
+    
+    def size(self):
+        return len(self.q)
+    
+    def __str__(self) -> str:
+        return f"{str(self.q)}"
+    
+
+
+if __name__ == "__main__":
+    k = QUEUE()
+    k.enqueue({
+        'company': 'Wall Mart',
+        'timestamp': '15 apr, 11.01 AM',
+        'price': 131.100
+    })
+    k.enqueue({
+        'company': 'D Mart',
+        'timestamp': '15 apr, 11.02 AM',
+        'price': 131.104
+    })
+    k.enqueue({
+        'company': 'ebay',
+        'timestamp': '15 apr, 11.03 AM',
+        'price': 131.103
+    })
+    print(k.size())
+    print(k.dequeue())
+    print(k.q)
+
