@@ -62,21 +62,21 @@ k = t.set_node_level(3)
 
 from queue import QUEUE
 from stack import STACK
-class TreeNode:
+class Node:
     def __init__(self, data):
         self.data = data
         self.children = []
 
 class Tree:
     def __init__(self, root): 
-        self.root = TreeNode(root)
+        self.root = Node(root)
 
     # Created add_child using bfs approach
 
     def add_child(self, parent, child_data):
         r = self.root
         if r.data == parent:
-            node = TreeNode(child_data)
+            node = Node(child_data)
             r.children.append(node)
 
         else:
@@ -90,7 +90,7 @@ class Tree:
             while q.size() > 0:
                 c = q.dequeue()
                 if c.data == parent:
-                    n1 = TreeNode(child_data)  
+                    n1 = Node(child_data)  
                     c.children.append(n1)      
                     break
                 else:
