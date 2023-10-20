@@ -1,0 +1,3 @@
+"""The best example for recursion is folder in folder in folder. 
+Ask students to write a function to parse path name (only introduce recursion after they know how to deal with strings), and they'll get the point. Fibonacci is the worst example, because you can do it with loop and easier. Don't use that, even if all textbooks do that. Your students will think recursion is just another useless pedantic nonsense.
+"""
